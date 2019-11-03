@@ -6,7 +6,6 @@ It is a calculator. This is my first project in C. It include basic (like additi
 
 #define PI 3.14159265
 
-// Esma Nisa Candan 18010011060
 int main()
 {
     int secim1, secim2, secim3,a, mod, sonuc1;
