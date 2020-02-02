@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define boyut 35
+
+int main()
+{
+    int i, j, k;
+    int bosluk1=1;
+    int bosluk2=(boyut-6);
+    int bosluk3=1;
+
+    for(i=1; i<=1; i++)
+    {
+        printf("*");
+        for(j=1; j<=boyut-2; j++)
+        {
+            printf(" ");
+        }
+        printf("*");
+    }
+    printf("\n");
+
+    for(i=1; i<=1; i++)
+    {
+        printf("**");
+        for(j=1; j<=boyut-4; j++)
+        {
+            printf(" ");
+        }
+        printf("**");
+    }
+    printf("\n");
+
+    for(i=1; i<=(boyut/2)-2;i++)
+    {
+        printf("*");
+        for(j=1; j<=bosluk1; j++)
+        {
+            printf(" ");
+        }
+        printf("*");
+        for(j=bosluk2; j>=1; j--)
+        {
+            printf(" ");
+        }
+        printf("*");
+        for(j=1; j<=bosluk3; j++)
+        {
+            printf(" ");
+        }
+        printf("*");
+
+        bosluk1++;
+        bosluk2-=2;
+        bosluk3++;
+        printf("\n");
+    }
+    for(i=1; i<=boyut/2;i++)
+    {
+        printf("*");
+        for(j=1; j<=boyut-2; j++)
+        {
+            printf(" ");
+        }
+        printf("*");
+        printf("\n");
+    }
+
+    return 0;
+}
