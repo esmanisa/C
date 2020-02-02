@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+const float PI = 3.14
+
+/*Kullanicidan alinan yaricap degerine göre dairenin alan ve cevresini fonksiyonlar araciligiyla bulan program.*/
+
+float daireAlan(float r)
+{
+    double sonuc1=0;
+    sonuc1 = PI*r*r;
+    return sonuc1;
+}
+
+float daireCevre (float r)
+{
+    double sonuc2=0;
+    sonuc2 = 2*PI*r;
+    return sonuc2;
+}
+
+float main()
+{
+    int secim;
+    float r;
+    printf("Dairenin cevresini bulmak icin 1;\nDairenin alanini bulmak icin 2'yi seciniz:");
+    scanf("%d", &secim);
+    if(secim==1)
+    {
+        printf("Dairenin yaricapini girin:");
+        scanf("%f, &r);
+       int daireCevre = daireCevre(float r);
+       printf("Dairenin cevresi: %0.2f",daireCevre);
+    }
+    else
+    {
+        printf("Dairenin yaricapini girin:");
+        scanf("%d",&r);
+        int daireAlan=daireAlan(float r);
+        printf("Dairenin alani: %.02f", daireAlan);
+    }
+
+    return 0;
+}
+
