@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    int sayi=0;
+    do
+    {
+        printf("Karekokunu almak istediðiniz sayiyi giriniz:\n");
+        printf("(Programdan cikmak icin 0 degerini giriniz:)");
+        scanf("%d", &sayi);
+        double root = sqrt((double) sayi);
+        printf("-------------------------------------------------\n");
+        printf("Girilen deðer:%d\n", sayi);
+        printf("Karekoku :%.2f", root);
+        printf("\n-------------------------------------------------\n");
+    }
+    while(sayi !=0);
+    printf("Programdan cikiliyor...");
+    return 0;
+}
