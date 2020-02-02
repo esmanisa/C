@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void diziYazdir(int *dizi, int elemanSayisi);
+
+int main()
+{
+    int *sayiDizisi;
+    int sayi;
+
+    printf("Eleman sayisini giriniz: ");
+    scanf("%d", &sayi);
+
+    sayiDizisi = (int*)calloc(sayi, sizeof(int));
+
+    printf("---------------------------\n");
+    printf("Calloc sonucu olusan dizi: \n");
+    printf("---------------------------\n");
+
+    diziYazdir(sayiDizisi, sayi);
+
+    printf("-----------------------------------------\n");
+    printf("Dizi elemanlarina 5 degerini atayalim.\n");
+    printf("-----------------------------------------\n");
+
+    int i;
+
+    for(i=0; i<sayi; i++)
+    {
+        sayiDizisi[i] = 5;
+    }
+
+    diziYazdir(sayiDizisi, sayi);
+
+    sayi = 10;
+
+    sayiDizisi = realloc(sayiDizisi, sayi*sizeof(int));
+
+    printf("------------------------------------------\n");
+    printf("Realloc sonucu olusan dizi elemanlari: \n");
+    printf("------------------------------------------\n");
+    diziYazdir(sayiDizisi, sayi);
+
+    free(sayiDizisi);
+
+    return 0;
+}
+
+void diziYazdir(int *dizi, int elemanSayisi)
+{
+    int i;
+    for(i=0; i<elemanSayisi; i++)
+    {
+        printf("dizi[%d]=[%d]\n",i, dizi[i]);
+    }
+}
