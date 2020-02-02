@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int s,k,yildiz,giris,bosluk;
+    giris=5;
+    yildiz=1;
+    bosluk=giris-1;
+    for(k=0;k<giris;k++)
+    {
+        for(s=0;s<bosluk;s++)
+        {
+            printf(" ");
+        }
+        for(s=0;s<yildiz;s++)
+        {
+            printf("*");
+        }
+        printf("\n");
+        bosluk--;
+        yildiz = yildiz+2;
+    }
+    yildiz=yildiz-2;
+    bosluk=0;
+    for(k=0;k<giris;k++)
+    {
+        for(s=0;s<bosluk;s++)
+        {
+            printf(" ");
+        }
+        for(s=0;s<yildiz;s++)
+        {
+            printf("*");
+        }
+        printf("\n");
+        bosluk++;
+        yildiz = yildiz-2;
+    }
+    return 0;
+}
