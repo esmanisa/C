@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanicidan alinan harfin sesli/sessiz olarak
+ekrana yazdiran C dilinde yazilmis kod parcasi.*/
+
+int main()
+{
+    char harf;
+    printf("Bir harf giriniz: ");
+    scanf("%c", &harf);
+
+    if (harf=='a' || harf=='e' || harf=='i' || harf=='o' || harf=='u')
+    {
+        printf("%c harfi sesli harftir...", harf);
+    }
+
+    else
+    {
+        printf("%c harfi sessiz harftir...", harf);
+    }
+
+    return 0;
+}
