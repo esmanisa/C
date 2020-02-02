@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define boyut 20
+
+/*Donguler yardimiyla ve yildizlarla ekrana s harfini
+yazdiran C dilinde yazilmis kod parcasi.*/
+
+int main()
+{
+    int i,j;
+    int bosluk;
+     for(i=1; i<=boyut+2; i++)
+    {
+        for(j=1; j<=boyut; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+
+        for (i=1; i<=boyut/2-1; i++)
+        {
+            printf("*");
+            printf("\n");
+            bosluk = boyut-1;
+        }
+        break;
+    }
+     for(i=1; i<=boyut+2; i++)
+    {
+        for(j=1; j<=boyut; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+
+        for(i=1; i<=boyut/2-1; i++)
+        {
+            for(j=1; j<=boyut-1; j++)
+            printf(" ");
+            printf("*");
+            printf("\n");
+        }
+        for(i=1; i<=boyut;i++)
+        {
+            printf("*");
+        }
+
+        break;
+    }
+
+
+        return 0;
+}
