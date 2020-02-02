@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+char *strcev(char *);
+
+int main()
+{
+    char *s;
+
+    s = (char*)malloc(50*sizeof(char));  //dinamik bellek yonetimi karakter katarina bellekten yer ayrildi.
+
+    printf("Bir katar girin: ");
+    gets(s);                            //Katari bosluklu olarak almak icin gets() fonksiyonu kullanildi.
+
+    printf("Katar, s : %s\n",s);
+    printf("Tersi, strcev(s) : %s\n",strcev(s));
+
+    return 0;
+}
+
+/* str katarýný ters-yüz eder */
+char *strcev(char *str)
+{
+    int  i,n;
+    char gecici;
+
+    n = strlen(str);
+
+    for(i=0; i<n/2; i++)
+    {
+        gecici     = str[i];
+        str[i]     = str[n-i-1];
+        str[n-i-1] = gecici;
+    }
+
+    return str; /* geri dönüþ deðeri bir gösterici */
+}
