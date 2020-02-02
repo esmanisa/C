@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanicidan alinan sayinin karesini bulan C dilinde yazilmis kod parcasi.*/
+
+int kare_bul(int sayi)
+{
+    int sonuc=0;
+    sonuc = sayi*sayi;
+    return sonuc;
+
+}
+
+int main()
+{
+    int sayi, sonuc;
+    printf("Bir sayi giriniz: ");
+    scanf("%d", &sayi);
+    sonuc = kare_bul(sayi);
+    printf("%d sayisinin karesi=%d", sayi, sonuc);
+
+    return 0;
+}
