@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Rastgele bir tahmin sayisi ureten ve kullaniciya 5 hak veren program.*/
+
+int main()
+{
+    srand(time(NULL));
+    int sayi=rand() %100;
+    int hak=1, kontrol=0;
+    int tahmin=-1;
+    while (hak<=5 && sayi!=tahmin)
+    {
+        printf("Tahmin giriniz: \n");
+        scanf("%d", &tahmin);
+        if (sayi<tahmin)
+            printf("Sayiyi azaltin...\n");
+        else if (sayi>tahmin)
+            printf("Sayiyi arttirin...\n");
+        else
+       {
+            printf("Tebrikler!");
+            kontrol=1;
+       }
+
+        hak=hak+1;
+    }
+       if (kontrol==0)
+        printf("Oyunu kaybettiniz : %d", sayi);
+    return 0;
+}
