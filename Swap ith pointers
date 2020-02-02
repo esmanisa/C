@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Pointerler araciligiyla swap islemi.*/
+
+int main()
+{
+    int sayi1=25, sayi2=10;
+
+    printf("Sayi1=%d, Sayi2=%d\n", sayi1, sayi2);
+
+    int *arg1, *arg2;
+    arg1=&sayi1;
+    arg2=&sayi2;
+
+    int gecici = *arg1;
+    *arg1= *arg2;
+    *arg2=gecici;
+
+    printf("-----------------------------\n");
+    printf("ISLEMDEN SONRA\n");
+    printf("-----------------------------\n");
+    printf("Sayi1=%d, Sayi2=%d", sayi1, sayi2);
+
+    return 0;
+}
