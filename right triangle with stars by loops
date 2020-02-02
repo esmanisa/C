@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define m 10
+
+/*Donguler araciligiyla ekrana dik ucgen bastiran C dilinde yazilmis kod parcasisir.*/
+
+int main()
+{
+int i, j;
+    for( i = 0 ; i < m; i++ ) {
+    	for( j = 0; j < i+1; j++ ) {
+    		printf("* ");
+    	}
+    	printf("\n");
+    }    return 0;
+}
