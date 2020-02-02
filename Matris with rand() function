@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanicidan alinan satir ve sutun boyutuna gore rastgele kelime
+karakterlerini matrisin icine atayan C dilinde yazilmis kod parcasi.*/
+
+int main()
+{
+    int m,n,i,j;
+    printf("Satir boyutunu giriniz: ");
+    scanf("%d", &m);
+
+    printf("Sutun boyutunu giriniz: ");
+    scanf("%d", &n);
+
+    char matris[m][n];
+
+    srand(time(NULL));
+
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            matris[i][j]='A'+rand()%26;   //w,q,x harfleri sýkýntý mý?
+            printf("%c\t",matris[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
