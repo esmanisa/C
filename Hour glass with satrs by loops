@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int satir, boslukSayisi, yildizSayisi, i, j;
+
+// 23 satirdan olusuyor
+    satir = 25;
+
+// ilk satirda bosluk yok
+    boslukSayisi = 0;
+
+ //ilk satirda satir sayisi kadar yildiz var
+    yildizSayisi = satir;
+
+// ilk for satir sayisi kadar yazdirir
+    for(i=0; i<satir; i++){
+
+// ikinci for yildizlari yazdirir
+        for(j=0; j<yildizSayisi;j++)
+            printf("*");
+
+ //Kum saati yarisini geçene kadar yildiz azalir, bosluk artar
+        if( i < (satir / 2) ){
+            yildizSayisi-=2;
+            boslukSayisi++;
+        }
+
+ //Kum saatinin yarisindan sonra yildiz artar, boşluk azalir
+        else{
+            yildizSayisi+=2;
+            boslukSayisi--;
+        }
+
+// Asagi satira geçilip bosluk yazdirilir
+        printf("\n");
+        for(j=0; j<boslukSayisi;j++)
+            printf(" ");
+
+    }    return 0;
+}
