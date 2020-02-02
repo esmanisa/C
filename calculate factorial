@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanicidan alinan sayinin faktoriyelini bulan C diliinde yazilmis kod parcasi.*/
+
+int main()
+{
+    int i, sayi, faktoriyel=1;
+    printf("pozitif bir sayi giriniz: ");
+    scanf("%d", &sayi);
+
+
+    for (i=1; i<=sayi; i++)
+    {
+        faktoriyel*=i;            //   faktoriyel=faktoriyel*i;
+
+    }
+    printf("\n%d!=%d\n", sayi, faktoriyel);
+
+
+    return 0;
+}
