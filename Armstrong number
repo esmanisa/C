@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanicidan alinan sayinin armstrong sayisi olup olmadigini bulan program.
+(Bir sayi, kendi basamak degerlerinin küpleri toplamina esit ise Armstrong sayisidir.)*/
+
+int main()
+{
+    int sayi,geciciSayi, sonuc=0, i, kalan;
+
+    printf("Pozitif bir sayi giriniz: ");
+    scanf("%d", &sayi);
+    
+    geciciSayi=sayi;
+    
+    while(geciciSayi>0)
+    {
+        kalan=geciciSayi%10;
+        sonuc+=(kalan*kalan*kalan);
+        geciciSayi/=10;
+    }
+        if(sonuc==sayi)
+            printf("%d sayisi Armstrong sayidir...", sayi);
+        else
+            printf("%d sayisi Armstrong sayi degildir...", sayi);
+    return 0;
+}
