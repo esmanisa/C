@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define boyut 30
+
+/*Donguler araciligiyla ve yildizlarla ekrana d harfini yazdiran C dilinde yazilmis kod parcasi.*/
+
+int main()
+{
+    int i,j;
+    int bosluk1=boyut/2;
+    int bosluk2=boyut/2;
+
+    for(i=1; i<=1; i++)
+    {
+        for(j=1; j<=(boyut/2)+1; j++)
+        {
+            printf("*");
+        }
+    }
+    printf("\n");
+
+    for(i=1; i<=(boyut/2)+1; i++)
+    {
+        printf("*");
+        for(j=1; j<=bosluk1; j++)
+        {
+            printf(" ");
+        }
+        printf("*");
+        for(j=bosluk2; j>=1; j--)
+        {
+            printf(" ");
+        }
+
+        printf("\n");
+        bosluk1++;
+        bosluk2--;
+    }
+
+    for(i=1; i<=(boyut/2)+1; i++)
+    {
+        printf("*");
+        for(j=bosluk1; j>=1; j--)
+        {
+            printf(" ");
+        }
+        printf("*");
+        for(j=1; j<=bosluk2; j++)
+        {
+            printf(" ");
+        }
+        //printf("*");
+        printf("\n");
+        bosluk1--;
+        bosluk2++;
+    }
+    for(i=1; i<=1; i++)
+    {
+        for(j=1; j<=(boyut/2)+1; j++)
+        {
+            printf("*");
+        }
+    }
+
+    return 0;
+}
