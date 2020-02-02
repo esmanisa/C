@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanicidan alinan karakter dizisinin kendisini
+ve tersini ekrana yazdiran C dilinde yazilmis kod.*/
+
+int main()
+{
+    char s[40], gecici;
+    int i,k=0;
+    printf("Bir seyler yazin: ");
+    gets(s);
+    printf("Metin dizisi %s\n",s);
+    while( s[k]!='\0')
+        k++;
+    for(i=0; i<k/2; i++)
+    {
+        gecici = s[k-i-1];
+        s[k-i-1]=s[i];
+        s[i]=gecici;
+    }
+    printf("Tersten metin dizisi: %s\n");
+    return 0;
+}
