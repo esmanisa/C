@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*string.h kutuphanesi icindeki strcmp() fonksiyonu
+kullanilarak C dilinde yazilmis kucuk bir yarisma kodu.*/
+
+int main()
+{
+    char dogruCevap[]="Ankara";
+    char cevap[20];
+
+    printf("Turkiye'nin baskenti hangi ilimizdir: ");
+    scanf("%s", cevap);
+
+    if(strcmp(cevap, dogruCevap)==0)
+    {
+        printf("Tebrikler, dogru cevap...");
+    }
+    else
+    {
+        printf("Cevabiniz yanlis tekrar deneyiniz...");
+    }
+
+    return 0;
+}
