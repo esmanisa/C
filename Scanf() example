@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+char x, y[20];
+int num;
+int main()
+{
+    int octal;
+    double d;
+    printf("Enter a character : ");
+    scanf("%c", &x);
+    printf("Enter a string : ");
+    scanf("%s", &y);
+    printf("Enter a integer number : ");
+    scanf("%d", &num);
+    printf("Enter a double number : ");
+    scanf("%o", &octal);
+
+    printf("%c, %s, %d, %lf, %o \n", x,y,num,d,octal);
+
+    return 0;
+}
