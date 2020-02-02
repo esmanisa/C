@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define boyut 25
+
+int main()
+{
+    int i,j;
+    int bosluk1=1;
+    int bosluk2=boyut-4;
+
+    for(i=1;i<=1; i++)
+    {
+        printf("*");
+        for(j=1; j<=boyut-2; j++)
+        {
+            printf(" ");
+        }
+        printf("*");
+    }
+    printf("\n");
+    for(i=1; i<=1; i++)
+    {
+        printf("**");
+        for(j=1; j<=boyut-3; j++)
+        {
+            printf(" ");
+        }
+        printf("*");
+    }
+    printf("\n");
+    for(i=boyut/2; i>=1; i--)
+    {
+        printf("*");
+        for(j=1; j<=bosluk1;j++)
+        {
+            printf(" ");
+        }
+        printf("*");
+        for(j=bosluk2;j>=1;j--)
+        {
+            printf(" ");
+        }
+        printf("*");
+        bosluk1+=2;
+        bosluk2-=2;
+        printf("\n");
+    }
+
+
+    return 0;
+}
