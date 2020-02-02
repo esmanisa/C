@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanicidan alinan sayiya kadar olan cift sayilarin toplamini ekrana yazdiran C dilinde yazilmis kod parcasi.*/
+
+int main()
+{
+    int i=1, toplam=0;
+    int sayi;
+
+    printf("Sayi giriniz:");
+    scanf("%d", &sayi);
+
+    while(i<sayi)
+    {
+        if (i%2==0)
+        {
+            printf("%-4d", i);
+            toplam=toplam+i;
+        }
+        i++;
+    }
+    printf("\nCift sayilarin toplami: %d", toplam);
+    return 0;
+}
