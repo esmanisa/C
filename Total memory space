@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Toplam bellek alanini hesaplayan C dilinde yazilmis kod.*/
+
+void main(void)
+{
+    long t=0;
+    char *p;
+
+    for(;;)
+    {
+        p = malloc(1024);
+        if(p==NULL)
+            break;
+        t += 1024;
+    }
+    printf("Toplam alan: %d\n", t);
+}
