@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define boyut 12
+
+/*Donguler araciligiyla, yildizlarla ekrana i harfini yazdiran C dilinde yazilmis kod parcasi.*/
+
+int main()
+{
+    int i,j;
+
+    for(i=1; i<=boyut/2;i++)
+    {
+        for(j=1; j<=boyut/2; j++)
+        {
+            printf("*");
+        }
+         printf("\n");
+
+    }
+             printf("\n");
+             printf("\n");
+
+    for(i=1; i<=boyut+2; i++)
+    {
+        for(j=1; j<=boyut/2; j++)
+            printf("*");
+            printf("\n");
+    }
+
+    return 0;
+}
