@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Dinamik bellek yonetimiyle sayidizisi icin yer ayirip, kullanicidan
+alinan sayilarin ortalamasini ekrana bastiran C dilinde yazilmis kod parcasi.*/
+
+int main()
+{
+    int i, toplam=0, sayi;
+
+    printf("Kac tane sayi girmek istiyorsunuz: ");
+    scanf("%d", &sayi);
+
+    int *sayiDizisi = (int*)malloc(sizeof(int)*sayi);
+
+    for(i=0; i<sayi; i++)
+    {
+        printf("%d. sayiyi giriniz: ", i+1);
+        scanf("%d", sayiDizisi+i);
+        toplam += sayiDizisi[i];
+    }
+    float ortalama = (float)toplam/(float)sayi;
+    printf("Girdiginiz dizinin ortalamasi:%.2f", ortalama);
+
+    return 0;
+}
