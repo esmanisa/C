@@ -3,7 +3,7 @@
 #define boyut 7
 
 /*Donguler araciligiyla, yildizlarla c harfini ekrana yazdiran C dilinde yazilmis kod.*/
-th l
+
 int bosluk(int k)
 {
     int ic_bosluk;
