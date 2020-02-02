@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanicidan alinan sayinin 2,3 ve 5 e tam bolunup bolunmedigini bulan C dilinde yazilmis kod.*/
+
+int main()
+{
+    int sayi;
+    printf("Bir sayi giriniz: ");
+    scanf("%d", &sayi);
+
+    if (sayi%2==0  &&  sayi%3==0  &&  sayi%5==0)
+    {
+        printf("Sayi 2,3 ve 5'e tam bolunebilir...");
+    }
+    else;
+        printf("Sayi 2,3, ve 5'e tam bolunemez...");
+    return 0;
+}
