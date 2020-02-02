@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*string.h kutuphanesinin icindeki strcmp() fonksiyonuyla
+ayni ozellikte olan my_strcmp() fonksiyonu. Ýki string ifadeyi karsilastirir*/
+int my_strcmp(char *p1, char *p2)
+{
+    int i=0;
+    while(*(p1+i)!='\0' && *(p2+i)!='\0')
+    {
+        if(*(p1+i)==*(p2+i))
+        {
+            i++;                 //eger iki stringdeki ifadeler esitse sayaci arttir.
+        }
+        else
+        {
+            return 0;            //degilse donguden cik.
+         }
+    }
+    return 1;                   //eger buraya kadar gelinmisse iki string ayni demektir.
+}
+
+int main()
+{
+    char *pkelime1, *pkelime2;
+
+    pkelime1 = malloc(25*sizeof(char));
+    pkelime2 = malloc(25*sizeof(char));
+
+    printf("Kelime girin:");             gets(pkelime1);
+    printf("Aranacak kelimeyi girin:");  gets(pkelime2);
+
+    if(my_strcmp(pkelime1, pkelime2)==1)
+    {
+        printf("%s ve %s ayni", pkelime1, pkelime2);
+    }
+    else
+    {
+        printf("%s ve %s farkli", pkelime1, pkelime2);
+    }
+
+    return 0;
+}
