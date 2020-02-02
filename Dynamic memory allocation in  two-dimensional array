@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void matrisYazdir(int**, int, int);
+void transpozYazdir(int**, int, int);
+
+int main()
+{
+    int **matris;
+    int satirSayisi, sutunSayisi;
+    int i,j;
+
+    printf("Satir sayisini giriniz: ");
+    scanf("%d", &satirSayisi);
+    printf("Sutun sayisini giriniz: ");
+    scanf("%d", &sutunSayisi);
+
+    matris = (int **)malloc(sizeof(int*)*satirSayisi);
+
+    for(i=0; i<satirSayisi;i++)
+        matris[i] = (int *) malloc(sizeof(int*)*sutunSayisi);
+
+    printf("--------------------------------\n");
+    printf("Matris icin elemanlari giriniz: \n");
+    printf("---------------------------------\n");
+
+    for(i=0; i<satirSayisi; i++)
+    {
+        for(j=0; j<sutunSayisi; j++)
+        {
+            printf("Matris[%d][%d]:", i, j);
+            scanf("%d", &matris[i][j]);
+        }
+    }
+    printf("--------------------------------\n");
+    printf("Girdiginiz matris: \n");
+    printf("--------------------------------\n");
+    matrisYazdir(matris, satirSayisi, sutunSayisi);
+
+    printf("--------------------------------\n");
+    printf("Girdiginiz matrisin transpozu: \n");
+    printf("--------------------------------\n");
+    transpozYazdir(matris, satirSayisi,sutunSayisi);
+
+    for(i=0; i<satirSayisi; i++)
+    {
+        free(matris[i]);
+    }
+    free(matris);
+
+    return 0;
+}
+
+void matrisYazdir (int ** matris, int satir, int sutun)
+{
+    int i,j;
+    for(i=0; i<satir; i++)
+    {
+        for(j=0; j<sutun; j++)
+        {
+            printf("%5d", matris[i][j]);
+        }
+        printf("\n");
+    }
+}
+/*matrisin aynı numaralı satırlarıyla sütunlarının yer değiştirmesiyle 
+elde edile nmatrise  Transpoz (devrik matris) denir*/
+void transpozYazdir(int ** matris, int satir, int sutun)  
+{
+    int i,j;
+    for(i=0; i<sutun; i++)
+    {
+        for(j=0; j<satir; j++)
+        {
+            printf("%5d", matris[j][i]);
+        }
+        printf("\n");
+    }
+}
