@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+/*Kullanicidan toplamak istedigi kadar sayi alip bu sayilarin
+toplamini ekrana bastiran C diline yazilmis kod parcasi.*/
+
+int main()
+{
+  int n, sum = 0, c, value;
+
+  printf("How many numbers you want to add?");
+  scanf("%d", &n);
+
+  printf("Enter %d integers\n", n);
+
+  for (c = 1; c <= n; c++)
+  {
+    scanf("%d", &value);
+    sum = sum + value;
+  }
+
+  printf("Sum of the integers = %d\n", sum);
+
+  return 0;
+}
