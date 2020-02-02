@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanici sifirdan kucuk sayi girene kadar tek ve cift sayi tekrarini hesaplayan program.*/
+
+int main()
+{
+    int cift_sayac=0, tek_sayac=0, max_cift_sayi_tekrar=0, max_tek_sayi_tekrar=0, sayi=0;
+
+    do
+    {
+        printf("Lutfen sayi girin:");
+        scanf("%d", &sayi);
+        printf("\n");                       //güzelleþtirmek için alt satira indi...
+
+        if(sayi>0)
+        {
+            if(sayi%2==0)
+            {
+                cift_sayac++;
+
+                if(max_cift_sayi_tekrar<cift_sayac)
+                {
+                    max_cift_sayi_tekrar = cift_sayac;
+                }
+                tek_sayac = 0;
+            }
+            else
+        {
+            tek_sayac++;
+
+            if(max_tek_sayi_tekrar<tek_sayac)
+            {
+                max_tek_sayi_tekrar = tek_sayac;
+            }
+            cift_sayac = 0;
+        }
+        }
+
+    }
+
+    while(sayi>=0);
+
+    printf("----------------------------\nNegatif sayi girdiniz... Program sonlandiriliyor...\n---------------------------------\n\n");
+    {
+        printf("Ardisik girilen cift sayi tekrari => %d\n", max_cift_sayi_tekrar);
+        printf("Ardisik girilen tek sayi tekrari  => %d\n", max_tek_sayi_tekrar);
+    }
+
+        return 0;
+}
