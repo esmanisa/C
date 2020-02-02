@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanici sifirdan kucuk sayi girene kadar kullanicidan sayi alan,
+kullanici sifirdan kucuk sayi girdiginde girilen sayilarin toplamini
+ve ortalamasini ekrana yazdiran C  dilinde yazilmis kod parcasi.*/
+
+int main()
+{
+    int i=0,sayi;
+    int toplam=0;
+   printf("Sayi giriniz: ");
+   scanf("%d", &sayi);
+    while (sayi>=0)
+    {
+        toplam=toplam+sayi;
+        printf("Sayi giriniz: ");
+        scanf("%d", &sayi);
+        i++;
+    }
+    double ort= (double) toplam/i;
+    printf("Toplam= %d , Ort: %.2f", toplam, ort);
+
+    return 0;
+}
