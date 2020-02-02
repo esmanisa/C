@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define boyut 12
+
+/*Dongu yardimiyla, yildizlarla ekrana a harfini yazdiran C dilinde yaziilmis kod parcasi.*/
+
+int main()
+{
+int i, j;
+
+    for(i=1; i<=boyut/2+1; i++)
+    {
+        for(j=i; j<boyut/2+1; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=(2*i-1); j++)
+        {
+            if(i==boyut || j==1 || j==(2*i-1))  //son satir icin, ilk sutun icin ve son sutun icin yildiz yazdir...
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }        }
+        printf("\n");
+    }
+    for(i=1; i=1; i)
+    {
+        for(j=1; j<=boyut+1; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+        break;
+    }
+
+        for(i=1; i<=(boyut/2); i++)
+    {
+        printf("*");
+
+        for(j=1; j<=boyut-1; j++)
+        {
+            printf(" ");
+        }
+        printf("*");
+        printf("\n");
+    }
+
+
+    return 0;
+}
