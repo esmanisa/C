@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanicidan vize ve final notunu alip,
+gecme notunu hesaplayan C dilinde yazilmis kod parcasi.*/
+
+int main()
+{
+    int vize,finalnot,gecmenotu;
+
+    printf("Vize notunu giriniz:");
+    scanf("%d", &vize);
+
+    printf("Final notunu giriniz:");
+    scanf("%d", &finalnot);
+
+    gecmenotu=(vize*0.4)+(finalnot*0.6);
+
+    if (gecmenotu<49.45)
+
+     printf("Kaldiniz!");
+
+    else
+     printf("Gectiniz:)");
+
+    return 0;
+}
