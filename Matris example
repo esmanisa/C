@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define m 4
+#define n 3
+
+/*A ve B matrisine rastgele sayi atayip, C matrisine de A ve B matrisinin carpimini atayan program.*/
+
+void matrisYazdir(int matris[][1], int s1, int s2) //derleyici hata verdigi icin matrisin sutun sayisina bir deger atadik
+{
+    int i,j;
+    for (i=0; i<s1; i++)
+    {
+        for(j=0; j<s2; j++)
+        {
+            printf("%4d", matris[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main()
+{
+    srand(time(NULL));  //farkli sayilar uretmek icin srand fonk kullandik...
+    int A[m][n], B[n][m], C[m][m];
+    int i,j,k,t;
+
+    for(i=0; i<m; i++) //ilk satirdan başlanir...
+    {
+        for(j=0; j<n; j++) //sonra sutun
+        {
+            A[i][j] = 1 + rand()%10; //%10 ile 0-10 arasinda sayi uretir...
+        }
+    }
+
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<m; j++)
+        {
+            B[i][j] = 1 + rand()%10;
+        }
+    }
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<m; j++)
+        {
+            t=0;
+            for(k=0; k<n; k++)
+            {
+                t += (A[i][k]*B[k][j]);
+            }
+            C[i][j] = t;
+        }
+    }
+
+    printf("\nA matrisi:\n");
+    matrisYazdir(A, m, n);
+    printf("\nB matrisi:\n");
+    matrisYazdir(B, n, m);
+    printf("\nC matrisi:\n");
+    matrisYazdir(C, m, m);
+
+    return 0;
+}
